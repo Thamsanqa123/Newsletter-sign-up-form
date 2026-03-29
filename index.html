@@ -7,7 +7,7 @@
     <script src="app.js" defer></script>
     <style>
         body {
-            background-color: #22213de1;
+
             font-family: Arial, sans-serif;
         }
 
@@ -17,7 +17,7 @@
             /* align-items: center;
             justify-content: center; */
             background-color: white ;
-            width: 100%;
+      
             height: 100vh;
         }
 
@@ -25,10 +25,10 @@
             list-style: none;
         }
 
-.container .advert-info {
+/* .container .advert-info {
            
            background-color: rgba(100, 100, 100, 0.466);
-        }
+        } */
         #form {
             display: flex;
             flex-direction: column;
@@ -49,8 +49,9 @@
     </ul>
 </div>
 <form id="form">
-    <label for="email">Email Address</label>
-    <input type="email" placeholder="Email Address">
+    <label for="email">Email Address <span id="errorM"></span></label>
+    <input type="email" id="email" placeholder="email@company.com" required>
+    
     <button type="submit">Subscribe to monthly newsletter</button>
     </form>
     </div>

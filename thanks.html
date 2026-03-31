@@ -4,8 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News letter</title>
+    <!-- <script src="app.js" defer></script> -->
+    <style>
+        .container {
+            color: rgb(39, 39, 77);
+          font-family: Arial, sans-serif;
+          width: 90%;
+           margin-left:15px;
+           margin-top: 150px;
+         
+
+        }
+        .container img{
+            width: 18%;
+        }
+        h1{
+            font-size: 11vmin;
+          font-weight: 750;
+              font: bold;
+             
+              letter-spacing: none;
+        }
+        p{
+            font: bold;
+             font-weight: 500;
+        }
+         button{
+             border-radius: 8px;
+            background-color: rgb(39, 39, 77);
+            color: white;
+            padding: 16px 20px ;
+            width: 100%;
+    margin-top: 13.5rem;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+        }
+      
+
+    </style>
 </head>
 <body>
-    <p>Thank you nigga</p>
+    <div class="container">
+        <div class="successPage">
+         <img src="images/icon-list.svg" alt="sent">
+          <h1>Thanks for subscribing!</h1>
+          <p>A confirmation letter has been sent to<span id="successMessage"></span>. 
+            Please open it and click the button inside to confirm your subscription</p>
+          <button type="button" id="dismissBtn">Dismiss Message</button>
+          </div>
+    </div>
+  
+
 </body>
 </html>

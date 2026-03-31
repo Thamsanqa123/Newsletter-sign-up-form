@@ -3,53 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>News letter</title>
     <script src="app.js" defer></script>
     <style>
-        body {
 
-            font-family: Arial, sans-serif;
-        }
 
         .container {
             display: flex;
             flex-direction: column;
-            /* align-items: center;
-            justify-content: center; */
+         color: rgb(39, 39, 77);
             background-color: white ;
-      
+                  font-family: Arial, sans-serif;
+
             height: 100vh;
         }
 
-        ul{
-            list-style: none;
+#illustration{
+    position: absolute;
+    width: 100%;
+    top:0;
+    left: 0;
+}
+
+
+.container .advert-info {
+
+width: 90%;
+margin: 280px 0 0 12px;
+
+
         }
 
-/* .container .advert-info {
-           
-           background-color: rgba(100, 100, 100, 0.466);
-        } */
+        .advert-info h1{
+            font-size: 10vmin;
+            font-weight: 600;
+        }
+
+.advert-info .list{
+    display: flex;
+   gap: 5%;
+}
+
+.list p{
+    font-size: 15px;
+  
+}
+
+#para{
+    margin-top: 30px;
+}
+
+.listAlighn{
+   
+    margin-bottom: 10px;
+}
+
         #form {
+            position: relative;
             display: flex;
             flex-direction: column;
+            /* background-color: antiquewhite; */
+            width: 90%;
+            height: 100vh;
+            margin: 15px 15px;
+            
+            /* justify-content: space-between; */
+             
           
         }     
+
+        label, span{
+            font-size: 12px;
+            font-weight: 700;
+            font: bold;
+            margin-bottom: 5px;
+          
+        }
+
+        label{
+            color: rgb(32, 32, 83);
+        }
+        input{
+          border-radius: 8px;
+          border: 1px solid rgba(126, 126, 126, 0.685);
+    padding: 16px 20px ;
+    margin-bottom: 20px;
+    cursor: pointer;
+    
+        }
+        
+        input::placeholder{
+            color:rgba(126, 126, 126, 0.685);
+            font: bold;
+            font-size: 14px;
+        }
+
+        button{
+             border-radius: 8px;
+            background-color: rgb(39, 39, 77);
+            color: white;
+            padding: 16px 20px ;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 14px;
+    border: none;
+        }
+
+        button:hover{
+            background: linear-gradient(145deg, rgb(248, 54, 116)20%, orange);
+            box-shadow: 0 1px 10px  rgb(248, 54, 116);
+        }
+
         </style>
 </head>
 <body>
     <div class="container">
-<img src="images/illustration-sign-up-mobile.svg" alt="logo">
+<img id="illustration" src="images/illustration-sign-up-mobile.svg" alt="logo">
 <div class="advert-info">
     <h1>Stay updated!</h1>
    <p>Join 60,000+ product managers receiving monthly updates on:</p>
-    <ul>
-     <li><img src="images/icon-list.svg" alt="list">Product discovery and building what matters</li>
-     <li><img src="images/icon-list.svg" alt="list">Measuring to ensure updates are a success</li>
-     <li><img src="images/icon-list.svg" alt="list">And much more!</li>
-    </ul>
+   <div class="listAlighn">
+    <div class="list">
+        <img src="images/icon-list.svg" alt="list">
+     <p id="para">Product discovery and building what matters</p>
+    </div>
+    <div class="list">
+        <img src="images/icon-list.svg" alt="list">
+     <p id="para">Measuring to ensure updates are a success</p>
+    </div>
+     <div class="list">
+         <img src="images/icon-list.svg" alt="list">
+     <p>And much more!</p>
+    </div>
+    </div>
 </div>
 <form id="form">
-    <label for="email">Email Address <span id="errorM"></span></label>
+    <label for="email">Email address</label>
+    <span id="errorM"></span>
     <input type="email" id="email" placeholder="email@company.com" required>
     
     <button type="submit">Subscribe to monthly newsletter</button>

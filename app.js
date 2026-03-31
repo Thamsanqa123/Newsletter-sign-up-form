@@ -1,7 +1,5 @@
-const form = document.querySelector('#form');
-const emailInput = document.querySelector('#email');
-const btn = document.querySelector('button')
 
+const emailInput = document.querySelector('#email');
 const isValidEmail = (email)=> {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     return emailRegex.test(email)
@@ -29,23 +27,40 @@ return false
 
     errorM.innerHTML = ""
     emailInput.style.background = ''
-    emailInput.style.border = ""
+    emailInput.style.border = ''
     
         console.log(`Thank you for submitting your email: ${email}`)
-
+       
 return true
 
   
  }
+//  DOMContentLoaded event listener to ensure the DOM is fully loaded before attaching event listeners
+// document.addEventListener('DOMContentLoaded', () => {
 
+const form = document.querySelector('#form');
 
-form.addEventListener('click', (e) => {
+// handles email submission and redirects to the thank you page if the email is valid
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
    
-    validEmail()
-    window.location.href = ''
+    if(validEmail()){
+window.location.href = 'thanks.html'
+
+    }
+  
 })
+// })
+// validates the email as the user types
+emailInput.addEventListener('input', () => {
+    if (emailInput.value.trim() !== '') {
+        validEmail();
+    }
+});
+
+
+ 
 
 
 

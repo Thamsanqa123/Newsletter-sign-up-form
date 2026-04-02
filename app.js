@@ -36,28 +36,32 @@ return true
   
  }
 //  DOMContentLoaded event listener to ensure the DOM is fully loaded before attaching event listeners
-// document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
 const form = document.querySelector('#form');
-
 // handles email submission and redirects to the thank you page if the email is valid
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
    
     if(validEmail()){
+        localStorage.setItem("userEmail", emailInput.value.trim())
 window.location.href = 'thanks.html'
-
     }
-  
+
 })
-// })
+
 // validates the email as the user types
 emailInput.addEventListener('input', () => {
     if (emailInput.value.trim() !== '') {
         validEmail();
     }
 });
+
+})
+
+
+
 
 
  

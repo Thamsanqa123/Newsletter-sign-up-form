@@ -25,7 +25,9 @@
     left: 0;
 }
 
-
+      span{
+       margin-left: 160px;
+     }
 .container .advert-info {
 
 width: 90%;
@@ -81,6 +83,7 @@ margin: 350px 0 0 40px;
           
         }
 
+    
         label{
             color: rgb(32, 32, 83);
         }
@@ -132,7 +135,10 @@ margin: 350px 0 0 40px;
               height: 250vh;
             }
 
-          
+           span{
+       margin-left: 450px;
+     }
+
            
           #tablet{
 
@@ -173,6 +179,11 @@ margin: 350px 0 0 40px;
 
   
 }
+ span{
+        margin-left: 90px;
+        margin-bottom: 20px;
+     }
+
             .container .advert-info {
 
 position: absolute;
@@ -242,8 +253,11 @@ display: none;
     </div>
 </div>
 <form id="form">
-    <label for="email">Email address</label>
+    <div class="errorMessage">
+        <label for="email">Email address</label>
     <span id="errorM"></span>
+    </div>
+    
     <input type="email" id="email" placeholder="email@company.com" required>
     
     <button type="submit">Subscribe to monthly newsletter</button>
